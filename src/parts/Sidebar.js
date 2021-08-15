@@ -74,7 +74,7 @@ const Container = styled.div`
 	 @media ${device.xs} {
 	 	position:fixed;
 	 	top:15vh;
-        width: 50%;
+        width: 60%;
         transition:.5s;
 		left: ${(props) => (props.open ? "0" : "-100%")};
 
