@@ -4,9 +4,9 @@ import Input from '../components/Input';
 import loginBackground from '../assets/images/login-page-bg.png';
 import Button from '../components/Button';
 import  {device} from '../constants/mediaQueries';
+import { withRouter } from 'react-router-dom';
 
-
-const LoginBar =()=>{
+const LoginBar =(props)=>{
 
 	const [loginData,setLoginData]=useState({mobileNo:'',otp:''});
 const{mobileNo,otp}=loginData;
@@ -44,14 +44,15 @@ console.log(loginData);
 const handleMobileSubmit=(e)=>{
 	
 	e.preventDefault();
-	if(mobileNo.length!==10){
-		
-		setMobileErrors('Mobile Number should be of 10 digits');
-	}
 	if(!mobileNo.length){
 		
       setMobileErrors('Mobile Number Required');
 	}
+	else if(mobileNo.length!==10){
+		
+		setMobileErrors('Mobile Number should be of 10 digits');
+	}
+	
 	
 }
 const handleOtpSubmit=(e)=>{
@@ -63,6 +64,9 @@ const handleOtpSubmit=(e)=>{
 	}
 	else if(!otp.length){
       setOtpErrors('Otp Required');
+	}
+	else{
+		props.history.push("/account");
 	}
 }
 
@@ -159,4 +163,4 @@ const Form =styled.form`
 	align-items:center;
 
 `
-export default LoginBar;
+export default withRouter(LoginBar);
