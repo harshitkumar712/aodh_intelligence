@@ -43,7 +43,7 @@ const Container = styled.nav`
 	position: sticky;
 	top: 0;
 	background: #fff;
-	z-index: 999;
+	z-index: 100;
 `;
 const Wrapper = styled.div`
 	display: flex;

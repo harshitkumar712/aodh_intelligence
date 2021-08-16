@@ -155,6 +155,7 @@ const Error=styled.div`
 	font-weight:400;
 	font-family: 'Lato', sans-serif;
 	color:#AE4949;
+	
 `
 const Form =styled.form`
 	width:100%;
