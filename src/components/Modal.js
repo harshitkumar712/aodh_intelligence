@@ -62,6 +62,15 @@ const Wrapper = styled.div`
     margin: 1rem;
     width: 100px;
   }
+  input[type=text]{
+    border: 2px solid rgba(37, 160, 202, 0.5);
+  border-radius: 10px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  padding: 5px 10px;
+  font-size: 1rem;
+  width: 75%;
+  }
 
   @media ${device.md} {
     width: 60%;

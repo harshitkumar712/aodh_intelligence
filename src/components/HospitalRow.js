@@ -15,6 +15,9 @@ const HospitalRow = () => {
 		setModalAccess(!modal);
 		
 	};
+
+
+
 	return (
 		<>
 			<Row>
@@ -29,7 +32,7 @@ const HospitalRow = () => {
 			</Row>
 			 <Modal open={modal} close={()=>setModal(false)}>
 
-            	Add any comment<input type="text"/><br/>
+            	<div>Add any comment</div><input  type="text"/><br/>
             	<p>Hello this is testing <span ><b>{newDate.toDateString()}</b></span></p>
             	<p>Now it's live <span ><b>{newDate.toDateString()}</b></span></p>
             	<button onClick={handleModal}>Comment</button>
