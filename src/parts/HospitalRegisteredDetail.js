@@ -53,7 +53,16 @@ const Wrapper = styled.table`
 	text-align:center;
 	font-family: "Lato", sans-serif;
 	font-weight:700;
-
+th{
+	color:#003300;
+}
+@media ${device.md} {
+		th{
+			
+			font-size:0.8rem;
+		}
+		
+		}
 `
 const Header = styled.div`
 	display: flex;

@@ -2,6 +2,7 @@ import React, { useState }  from "react";
 import styled from 'styled-components';
 import Modal from './Modal';
 import {Link} from 'react-router-dom';
+import {device} from '../constants/mediaQueries';
 
 const HospitalRow = () => {
 	const [modal,setModal]= useState(false);
@@ -28,11 +29,11 @@ const HospitalRow = () => {
 				<td><Link to="/registration"><Button>Request</Button></Link></td>
 				<td>Pending</td>
 				<td><Button onClick={handleModal} >Open</Button></td>
-				<td><Button onClick={handleModalAccess}>Access</Button></td>
+				<td><Button onClick={handleModalAccess}>Access to</Button></td>
 			</Row>
 			 <Modal open={modal} close={()=>setModal(false)}>
 
-            	<div>Add any comment</div><input  type="text"/><br/>
+            	<input placeholder="Add any comment" type="text"/><br/>
             	<p>Hello this is testing <span ><b>{newDate.toDateString()}</b></span></p>
             	<p>Now it's live <span ><b>{newDate.toDateString()}</b></span></p>
             	<button onClick={handleModal}>Comment</button>
@@ -56,6 +57,14 @@ td{
 	padding:1rem;
 }
 
+@media ${device.md} {
+		td{
+			padding:0.5rem;
+			font-size:0.8rem;
+		}
+		
+		}
+
 	background: #FFFFFF;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 15px;
@@ -63,9 +72,10 @@ border-radius: 15px;
 const Button = styled.button`
 border:none;
 color:#fff;
-padding:.5rem 1rem;
+padding:5px 10px;
 	background: #0CB2B2;
 border-radius: 10px;
+font-size:0.8rem;
 
 `
 export default HospitalRow;

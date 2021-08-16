@@ -414,6 +414,11 @@ const RegistrationDetail = () => {
 						required
 					/>
 				</div>
+				<div>
+				<label htmlFor="hospital-logo">Hospital Logo</label>
+                <input type="file"  id="hospital-logo"/>
+                
+            </div>
 				<div className="submit">
 				   <span>{error}</span>
 					<Submit type="submit" value="submit"/>
