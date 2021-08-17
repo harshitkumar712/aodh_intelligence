@@ -34,8 +34,8 @@ const HospitalRow = () => {
 			 <Modal open={modal} close={()=>setModal(false)}>
 
             	<input placeholder="Add any comment" type="text"/><br/>
-            	<p>Hello this is testing <span ><b>{newDate.toDateString()}</b></span></p>
-            	<p>Now it's live <span ><b>{newDate.toDateString()}</b></span></p>
+            	<p>Hello this is testing<br/> <span style={{color:"#003300"}}><b>-{newDate.toDateString()}</b></span></p>
+            	<p>Now it's live<br/><span style={{color:"#003300"}}><b>-{newDate.toDateString()}</b></span></p>
             	<button onClick={handleModal}>Comment</button>
             </Modal>
             <Modal open={modalAccess} close={()=>setModalAccess(false)}>
