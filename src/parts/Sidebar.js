@@ -1,9 +1,9 @@
-import React, { useState,useContext } from "react";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import DropdownItem from '../components/DropdownItem';
-import {device} from '../constants/mediaQueries';
-import {SidebarContext} from '../helpers/SidebarContext';
+import DropdownItem from "../components/DropdownItem";
+import { device } from "../constants/mediaQueries";
+import { SidebarContext } from "../helpers/SidebarContext";
 const SidebarItems = [
 	{
 		name: "Account",
@@ -24,12 +24,11 @@ const SidebarItems = [
 		],
 		route: "/hospitals",
 	},
-	
 ];
 
 const Sidebar = ({ indexValue }) => {
-	const  {sidebarToggle,toggleSidebar}=useContext(SidebarContext);
-	console.log(sidebarToggle)
+	const { sidebarToggle, toggleSidebar } = useContext(SidebarContext);
+	console.log(sidebarToggle);
 	const [activeIndex] = useState(indexValue || 0);
 	return (
 		<Container open={sidebarToggle}>
@@ -37,11 +36,20 @@ const Sidebar = ({ indexValue }) => {
 			{SidebarItems.map((item, index) => {
 				if ("subItems" in item)
 					return (
-						<DropdownItem toggleSidebar={toggleSidebar} key={item.name} item={item} active={index === activeIndex}/>
+						<DropdownItem
+							toggleSidebar={toggleSidebar}
+							key={item.name}
+							item={item}
+							active={index === activeIndex}
+						/>
 					);
 				else {
 					return (
-						<Link onClick={toggleSidebar} to={item.route} key={item.name}>
+						<Link
+							onClick={toggleSidebar}
+							to={item.route}
+							key={item.name}
+						>
 							<SidebarItem active={index === activeIndex}>
 								<p>{item.name}</p>
 								<i className="fas fa-chevron-right"></i>
@@ -106,6 +114,5 @@ const SidebarItem = styled.div`
 		color: #fff;
 	}
 `;
-
 
 export default Sidebar;

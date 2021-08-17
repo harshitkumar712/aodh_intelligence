@@ -416,7 +416,7 @@ const RegistrationDetail = () => {
 				</div>
 				<div>
 				<label htmlFor="hospital-logo">Hospital Logo</label>
-                <input type="file"  id="hospital-logo"/>
+                <Input type="file" id="hospital-logo"/>
                 
             </div>
 				<div className="submit">
