@@ -1,12 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import logo from "../assets/images/logo1.png";
 import styled from "styled-components";
 import SearchBox from "../components/SearchBox";
 import { withRouter,Link } from "react-router-dom";
 import {device} from '../constants/mediaQueries';
 import profile from "../assets/images/profile.png";
+import Modal from '../components/Modal';
 
 const Navbar = (props) => {
+	const [modal,setModal]= useState(false);
 	return (
 		<Container>
 			<Wrapper>
@@ -25,10 +27,15 @@ const Navbar = (props) => {
 				{props.location.pathname !== "/" && (
 					<>
 						<i onClick={props.toggleSidebar} className="fas fa-bars bars"></i>
-						<i className="far fa-bell"></i>
+						<i onClick={()=>setModal(prev=>!prev)} className="far fa-bell"></i>
 						<Link to="/"><i className="fas fa-sign-out-alt"></i></Link>
 					</>
 				)}
+				<Modal  open={modal} close={()=>setModal(false)}>
+
+            	<h4 style={{color:"#003300"}}>Notifications</h4>
+            	<p>No notifications </p>
+            </Modal>
 			</StatusBar>
 		</Container>
 	);

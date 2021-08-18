@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import styled from "styled-components";
 import { device } from "../constants/mediaQueries";
 
-const Modal = ({ open, children, close }) => {
+const Modal = ({open, children, close }) => {
   if (!open) return null;
 
   return ReactDOM.createPortal(
     <Container onClick={close}>
-      <Wrapper onClick={(e) => e.stopPropagation()}>
+      <Wrapper  onClick={(e) => e.stopPropagation()}>
         <span onClick={close} className="close">
           &times;
         </span>
@@ -45,13 +45,19 @@ const Container = styled.div`
   }
 `;
 const Wrapper = styled.div`
+position: absolute;
+
+top: 40%;
+left: 50%;
+  
+  transform: translate(-50%, -50%);
   text-align: center;
   border-radius: 10px;
   background-color: #fefefe;
-  margin: auto;
+  
   padding: 20px;
   border: 1px solid #888;
-  width: 40%;
+  width: ${(props) => props.width?props.width:"40%"};
   font-size: 1rem;
   button {
     border: none;
@@ -73,7 +79,7 @@ const Wrapper = styled.div`
   }
 
   @media ${device.md} {
-    width: 60%;
+   width: 60%;
   }
   @media ${device.sm} {
     width: 80%;

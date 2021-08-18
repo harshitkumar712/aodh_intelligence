@@ -59,7 +59,7 @@ td{
 
 @media ${device.md} {
 		td{
-			padding:0.5rem;
+			padding:0.6rem;
 			font-size:0.8rem;
 		}
 		
