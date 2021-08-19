@@ -93,7 +93,7 @@ const Container = styled.div`
     cursor:default;
     .title-span{
     	background:rgba(37,160,202,0.5);
-    	margin:5px;
+    	margin:2px 4px;
     	border-radius:5px;
     	padding:1px;
     }
