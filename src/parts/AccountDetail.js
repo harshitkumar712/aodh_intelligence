@@ -106,6 +106,11 @@ const Details = styled.div`
 	td {
 		padding: 0.5rem;
 	}
+	table td:first-child:after{
+    content:":";
+    float:right;
+
+	}
 	@media ${device.sm} {
 		background: transparent;
 		border:none;
