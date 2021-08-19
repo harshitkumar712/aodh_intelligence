@@ -79,7 +79,7 @@ const Wrapper= styled.div`
 	position:relative;
 `
 const Container = styled.div`
-	border: 3px solid #003300;
+	border: 2px solid #003300;
 	border-radius: 20px;
 	font-family: "Lato", sans-serif;
 	font-weight:400;
