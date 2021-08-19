@@ -498,7 +498,7 @@ const Form = styled.form`
 	
 `;
 const Input = styled.input`
-	border: 5px solid rgba(37, 160, 202, 0.5);
+	border: 3px solid #003300;
 	border-radius: 20px;
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
@@ -507,7 +507,7 @@ const Input = styled.input`
 	width: 90%;
 `;
 const Select = styled.select`
-	border: 5px solid rgba(37, 160, 202, 0.5);
+	border: 3px solid #003300;
 	border-radius: 20px;
 	font-family: "Lato", sans-serif;
 	font-weight: 400;
