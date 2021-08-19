@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import HospitalRow from '../components/HospitalRow';
-import {device} from '../constants/mediaQueries';
+import HospitalRow from "../components/HospitalRow";
+import { device } from "../constants/mediaQueries";
 
-
-const HospitalRegisteredDetail=()=>{
-	return(
+const HospitalRegisteredDetail = () => {
+	return (
 		<Container>
 			<Back>
 				<i className="fas fa-chevron-left"></i>
@@ -14,61 +13,63 @@ const HospitalRegisteredDetail=()=>{
 				<h3>unregistered hospitals</h3>
 			</Header>
 			<Wrapper>
-<thead>
-<tr>
-<th>Initial date</th>
-<th>Hospital name</th>
-<th>Telephone</th>
-<th>Address</th>
-<th>Request Registration</th>
-<th>Status</th>
-<th>Comments</th>
-<th>Access</th>
-</tr>
-</thead>
-<tbody>
-	<HospitalRow/>
-	<HospitalRow/>
-	<HospitalRow/>
-	<HospitalRow/>
-	<HospitalRow/>
-	<HospitalRow/>	 
-</tbody>
-</Wrapper>
+				<thead>
+					<tr>
+						<th>Initial date</th>
+						<th>Hospital name</th>
+						<th>Telephone</th>
+						<th>Address</th>
+						<th>Request Registration</th>
+						<th>Status</th>
+						<th>Comments</th>
+						<th>Access</th>
+					</tr>
+				</thead>
+				<tbody>
+					<HospitalRow />
+					<HospitalRow />
+					<HospitalRow />
+					<HospitalRow />
+					<HospitalRow />
+					<HospitalRow />
+				</tbody>
+			</Wrapper>
 		</Container>
-		)
-}
+	);
+};
 
 const Container = styled.div`
 	font-family: "Josefin Sans", sans-serif;
 	width: 75%;
-	overflow-x:auto;
+	overflow-x: auto;
 	@media ${device.sm} {
-		width:100%;
-		}
+		width: 100%;
+	}
 `;
 const Wrapper = styled.table`
-	width:95%;
+	width: 95%;
 
-	text-align:center;
+	text-align: center;
 	font-family: "Lato", sans-serif;
-	font-weight:700;
-th{
-	color:#003300;
-}
-@media ${device.md} {
-		th{
-			
-			font-size:0.8rem;
+	font-weight: 700;
+	th {
+		padding: 5px;
+		background: #eee;
+
+		font-size: 1rem;
+		color: #003300;
+	}
+	@media ${device.md} {
+		th {
+			font-size: 0.8rem;
 		}
-		
-		}
-`
+	}
+`;
 const Header = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	text-transform:uppercase;
+	text-transform: uppercase;
 	margin: 1rem;
 `;
 const Back = styled.button`
