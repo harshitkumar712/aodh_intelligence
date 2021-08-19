@@ -11,7 +11,7 @@ border:none;
 	background: #0cb2b2;
 	color: white;
 	font-family: Josefin Sans;
-	width: 75%;
+	width: 50%;
 	height: 2.5rem;
     cursor:pointer;
 	

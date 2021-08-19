@@ -12,7 +12,7 @@ const Input=({label,type,id,handleChange,value,handleFocus,error})=>{
 const Container=styled.div`
 	
 	
-	width:75%;
+	width:50%;
 	font-family: 'Josefin Sans', sans-serif;
 	label{
 		font-size: 16px;
